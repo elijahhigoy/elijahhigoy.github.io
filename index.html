@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Elijah Higoy's personal portfolio — projects, experience, and skills.">
+  <title>Elijah Higoy — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="shell">
+    <header class="masthead">
+      <a class="monogram" href="#projects" aria-label="Elijah Higoy home">
+        eh<span>.</span>
+      </a>
+
+      <span class="edition">PERSONAL PORTFOLIO</span>
+
+      <button
+        id="theme-toggle"
+        type="button"
+        aria-label="Switch to dark mode"
+        title="Switch to dark mode"
+        aria-pressed="false"
+      >
+        <svg class="moon-icon" viewBox="0 0 24 24"
+             width="19" height="19" fill="none"
+             stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M20.8 13a9 9 0 0 1-9.8-9.8A9 9 0 1 0 20.8 13Z"/>
+        </svg>
+
+        <svg class="sun-icon" viewBox="0 0 24 24"
+             width="19" height="19" fill="none"
+             stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/>
+          <path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>
+        </svg>
+      </button>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">HELLO, I'M</p>
+        <h1>Elijah Higoy<span>.</span></h1>
+        <p class="bio">
+          Hi! I'm a first-year undergraduate student studying Bioengineering
+          at the University of Maryland, College Park.
+        </p>
+      </section>
+
+      <nav class="tabs" aria-label="Portfolio sections">
+        <span class="tab-indicator"></span>
+        <a href="#projects" data-tab="projects">Projects <span>01</span></a>
+        <a href="#experience" data-tab="experience">Experience</a>
+        <a href="#skills" data-tab="skills">Skills</a>
+        <a href="#about" data-tab="about">About</a>
+      </nav>
+
+      <!-- Section content is rendered by script.js. -->
+      <div id="content"></div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <button class="social pending" data-social="GitHub">
+          <img class="social-logo" src="photos/github.jpg"
+               alt="" width="17" height="17">
+          <span>GitHub ↗</span>
+        </button>
+
+        <button class="social pending" data-social="LinkedIn">
+          <img class="social-logo" src="photos/linkedin.jpg"
+               alt="" width="17" height="17">
+          <span>LinkedIn ↗</span>
+        </button>
+
+        <span class="email-group">
+          <a class="social-link" href="mailto:ehigoy@umd.edu">
+            <span class="email-icon">
+              <img src="photos/email.jpg" alt="" width="22" height="22">
+            </span>
+            <span>ehigoy@umd.edu</span>
+          </a>
+
+          <button id="copy" type="button"
+                  aria-label="Copy email address"
+                  title="Copy email address">
+            <svg width="15" height="15" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="1.5"
+                 aria-hidden="true">
+              <rect x="8" y="8" width="12" height="12" rx="2"/>
+              <path d="M16 8V4a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h4"/>
+            </svg>
+          </button>
+        </span>
+      </div>
+
+      <p>© <span id="year"></span> Elijah Higoy</p>
+    </footer>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
